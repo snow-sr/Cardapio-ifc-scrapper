@@ -11,7 +11,7 @@ import puppeteer from "puppeteer";
 function parseReadingErrors(str) {
     return str.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
 }
-function GetCardapio() {
+export function getCardapio() {
     return __awaiter(this, void 0, void 0, function* () {
         const browser = yield puppeteer.launch({
             executablePath: "/var/lib/snapd/snap/bin/chromium",
@@ -49,7 +49,7 @@ function GetCardapio() {
         }
         console.log(cardapioSemana);
         yield browser.close();
+        return cardapioSemana;
     });
 }
-GetCardapio();
 //# sourceMappingURL=scrapper.js.map

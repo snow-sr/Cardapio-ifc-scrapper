@@ -4,7 +4,7 @@ function parseReadingErrors(str: string): string {
   return str.replace(/\n/g, " ").replace(/\s+/g, " ").trim();
 }
 
-async function GetCardapio() {
+export async function getCardapio(){
   const browser = await puppeteer.launch({
     executablePath: "/var/lib/snapd/snap/bin/chromium",
   });
@@ -73,8 +73,8 @@ async function GetCardapio() {
   }
 
   console.log(cardapioSemana);
-
+  
   await browser.close();
+  return cardapioSemana;
 }
 
-GetCardapio();
