@@ -5,9 +5,7 @@ function parseReadingErrors(str: string): string {
 }
 
 export async function getCardapio(){
-  const browser = await puppeteer.launch({
-    executablePath: "/var/lib/snapd/snap/bin/chromium",
-  });
+  const browser = await puppeteer.launch();
 
   const page = await browser.newPage();
 
@@ -78,3 +76,4 @@ export async function getCardapio(){
   return cardapioSemana;
 }
 
+getCardapio();

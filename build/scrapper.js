@@ -13,9 +13,7 @@ function parseReadingErrors(str) {
 }
 export function getCardapio() {
     return __awaiter(this, void 0, void 0, function* () {
-        const browser = yield puppeteer.launch({
-            executablePath: "/var/lib/snapd/snap/bin/chromium",
-        });
+        const browser = yield puppeteer.launch();
         const page = yield browser.newPage();
         yield page.goto("https://docs.google.com/document/d/e/2PACX-1vTPE7yf1xB9XSPUdyHoeumfUmiGb-ZHwUeOCXm_KFfinckJymM1l6ibp294v9fySmfSQ8LcJUItdNcj/pub");
         // get all trs
@@ -52,4 +50,5 @@ export function getCardapio() {
         return cardapioSemana;
     });
 }
+getCardapio();
 //# sourceMappingURL=scrapper.js.map
