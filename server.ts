@@ -1,6 +1,6 @@
 import express from "express";
 const app: express.Application = express();
-const port: number =  8087;
+const port: any =  process.env.PORT || 8087;
 
 import { getCardapio } from "./scrapper.js";
 
