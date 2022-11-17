@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon ./build/server.js",
-    "start": "node ./build/server.js"
+    "start": "node ./build/server.js --omit=dev"
   },
   "author": "snow-sr",
   "license": "ISC",
