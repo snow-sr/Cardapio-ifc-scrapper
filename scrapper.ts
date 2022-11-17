@@ -5,7 +5,9 @@ function parseReadingErrors(str: string): string {
 }
 
 export async function getCardapio(){
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox'],
+  });
 
   const page = await browser.newPage();
 
