@@ -4,7 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./build/server.js"
+    "dev": "nodemon ./build/server.js",
+    "start": "node ./build/server.js"
   },
   "author": "snow-sr",
   "license": "ISC",
