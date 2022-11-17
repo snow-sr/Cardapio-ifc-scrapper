@@ -11,6 +11,9 @@ import express from "express";
 const app = express();
 const port = 8087;
 import { getCardapio } from "./scrapper.js";
+app.get("/", (req, res) => {
+    res.send("Hello World!\n This is the api for the IFC araquari cardapio, created by @snow-sr (joão felipi cardoso)\n for any questions, please see the Documentation at https://github.com/snow-sr/Cardapio-ifc-scrapper");
+});
 app.get("/cardapios", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield getCardapio();
     res.send(data);
