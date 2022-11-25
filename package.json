@@ -4,8 +4,10 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./build/server.js",
-    "start": "node ./build/server.js"
+    "dev": "npx nodemon ./dist/index.js",
+    "start": "node ./dist/index.js",
+    "tsc": "tsc",
+    "build": "tsc"
   },
   "author": "snow-sr",
   "license": "ISC",
